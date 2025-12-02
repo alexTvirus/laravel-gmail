@@ -7,6 +7,7 @@ use Dacastro4\LaravelGmail\Traits\HasDecodableBody;
 use Google_Service_Gmail;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 
 class Attachment extends GmailConnection
 {
@@ -123,7 +124,7 @@ class Attachment extends GmailConnection
 	 * @return string
 	 * @throws \Exception
 	 */
-	public function saveAttachmentTo($path = null, $filename = null, $disk = 'local')
+	public function saveAttachmentTo($path = null, $filename = null, $disk = 'public')
 	{
 
 		$data = $this->getDecodedBody($this->getData());
@@ -143,9 +144,7 @@ class Attachment extends GmailConnection
 		}
 
 		$filePathAndName = "{$path}{$filename}";
-
-		Storage::disk($disk)->put($filePathAndName, $data);
-
+        File::put($filePathAndName, $data);
 		return $filePathAndName;
 
 	}
