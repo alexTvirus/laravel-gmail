@@ -123,7 +123,7 @@ class Attachment extends GmailConnection
 	 * @return string
 	 * @throws \Exception
 	 */
-	public function saveAttachmentTo($path = null, $filename = null, $disk = 'local')
+	public function saveAttachmentTo($path = null, $filename = null, $disk = 'public')
 	{
 
 		$data = $this->getDecodedBody($this->getData());
