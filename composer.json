@@ -1,5 +1,5 @@
 {
-    "name": "dacastro4/laravel-gmail",
+    "name": "alexTvirus/laravel-gmail",
     "description": "Gmail API package for Laravel",
     "keywords": [
         "api",
@@ -9,9 +9,9 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Daniel Castro",
-            "email": "danielcastro04@gmail.com",
-            "homepage": "https://danielcastro.dev"
+            "name": "alexTvirus",
+            "email": "alexTvirus@gmail.com",
+            "homepage": "https://alexTvirus.dev"
         }
     ],
     "require": {
