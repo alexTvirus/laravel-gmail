@@ -41,6 +41,9 @@ class GmailConnection extends Google_Client
 
 		$this->configApi();
 
+		$this->setAccessType('offline');
+		$this->setApprovalPrompt('force');
+		
 		if ($this->checkPreviouslyLoggedIn()) {
 			$this->refreshTokenIfNeeded();
 		}
