@@ -53,6 +53,8 @@ class LaravelGmailClass extends GmailConnection
 
 	public function redirect()
 	{
+		$this->setAccessType('offline');
+		$this->setApprovalPrompt('force');
 		return Redirect::to($this->getAuthUrl());
 	}
 
